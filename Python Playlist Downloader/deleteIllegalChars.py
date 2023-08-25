@@ -11,7 +11,7 @@ def deleteIllegalChars(outputDir):
             newFilename = newFilename.replace('꞉', '').replace('∶', '').replace('⁚', '').replace('：', '').replace('ː', '')
             newFilename = newFilename.replace('＊', '').replace('⁎', '').replace('∗', '')
             newFilename = newFilename.replace('？', '')
-            newFilename = newFilename.replace('＂', '').replace('“', '').replace('”', '').replace('‘', '').replace('’', '').replace('„', '').replace('‟', '').replace('❝', '').replace('❞', '')
+            newFilename = newFilename.replace('＂', '').replace('“', '').replace('”', '').replace('‘', '').replace('’', '').replace('„', '').replace('‟', '').replace('❝', '').replace('❞', '').replace("'",'')
             newFilename = newFilename.replace('＞', '').replace('﹥', '').replace('›', '')
             newFilename = newFilename.replace('＜', '').replace('﹤', '')
             newFilename = newFilename.replace('｜', '').replace('│', '').replace('|', '')

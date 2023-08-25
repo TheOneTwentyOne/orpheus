@@ -5,9 +5,6 @@ from tkinter import filedialog, ttk
 from filterPlaylist import filterPlaylist
 
 
-
-
-
 def start_download():
     directory_path = directoryBox.get()
     directory_path = directory_path + '/'

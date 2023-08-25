@@ -13,7 +13,7 @@ from renameFlacFiles import renameFlacFiles
 
 
 def downloadProcess(url, directory_path, progress_var, duplicates):
-
+    print(directory_path)
     downloadVideos(url, directory_path, duplicates)
     progress_var.set(10)
 

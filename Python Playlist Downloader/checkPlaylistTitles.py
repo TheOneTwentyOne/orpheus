@@ -32,7 +32,7 @@ def checkPlaylistTitles(playlistUrl):
 
 
 # Call the function with the desired playlist URL
-playlistUrl = "https://youtube.com/playlist?list=PLLtfsNRMIOUd2uORg5V2TiP9Mk-73Kk4m"
+playlistUrl = "https://youtube.com/playlist?list=PLLtfsNRMIOUfJOEZNRnspJZrP_C2d0qaS"
 duplicates = checkPlaylistTitles(playlistUrl)
 for normalized_title, url_list in duplicates:
     print(f"Title: {normalized_title}")
