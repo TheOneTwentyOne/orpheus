@@ -15,7 +15,6 @@ import datetime
 import threading
 import youtube_dl
 
-
 import tkinter
 from tkinter import *
 from tkinter.ttk import *
@@ -245,7 +244,7 @@ class communal_methods:
             title, *artists = [a.strip() for a in description[2].strip().split(" · ")]
             title = title.strip()
             artist = communal_methods.basic_clean(str(artists[0]))
-            artist_metadata = ",(&) ".join(artists)
+            artist_metadata = "‎,‎‎ ".join(artists)
             album = description[4].strip()
 
             if checkbox_var_nums.get():
@@ -1569,10 +1568,11 @@ checkbox4.grid(row=1, column=1, padx=5, pady=5, sticky="w")
 
 thread_label = Label(
     main_window,
-    text="# of Threads\n (ENTER 10 IF\n YOU DO NOT KNOW\n WHAT A THREAD IS.)",
+    text="# of Threads",
     style="label_style.TLabel",
 )
 thread_label.grid(row=11, column=0, columnspan=6, rowspan=4)
+default_thread_count = tkinter.StringVar(value="64")
 thread_box = tkinter.Spinbox(
     main_window,
     background=CHIMNEY_SWEEP,
@@ -1580,8 +1580,10 @@ thread_box = tkinter.Spinbox(
     buttonbackground=CHIMNEY_SWEEP,
     from_=1,
     to=128,
+    textvariable=default_thread_count
 )
 thread_box.grid(row=11, column=4, columnspan=12, rowspan=4)
+
 
 
 # Replace these with your Last.fm API credentials and account information
@@ -1621,7 +1623,7 @@ checkbox_numbers.configure(
 
 
 # Add a checkbox to control the visibility of the button
-checkbox_var_nums = tkinter.BooleanVar(value=TRUE)
+checkbox_var_nums = tkinter.BooleanVar(value=FALSE)
 checkbox_nums = Checkbutton(
     checkbox_numbers_frame,
     text="Show Additional Input Button",
@@ -1726,4 +1728,5 @@ main_window.protocol("WM_DELETE_WINDOW", on_closing)
 
 # Run the application
 if __name__ == "__main__":
+    track_options_button.grid_forget()
     main_window.mainloop()
